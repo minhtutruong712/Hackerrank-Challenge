@@ -23,8 +23,8 @@ def diagonalDifference(arr):
     prim_diag = 0 
     sec_diag = 0    
     for i in range(0,n):
-        prim_diag += arr[i][i]    
-        sec_diag += arr[i][n-i-1]
+        prim_diag += arr[i][i]       # count sum of elements on primary diagonal   
+        sec_diag += arr[i][n-i-1]    # count sum of elements on secondary diagonal
     return abs(prim_diag-sec_diag)    
 
 if __name__ == '__main__':

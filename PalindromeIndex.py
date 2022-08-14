@@ -4,17 +4,17 @@ def palindromeIndex(s):
         
     def Solve (s): 
         i = 0
-        j = len(s)
-        while i<j and s[i] == s[j-1]:
-            i += 1
+        j = len(s)-1
+        while i<j and s[i] == s[j]: # while will loop when no different pattern is found
+            i += 1                  
             j -= 1
-        if i>=j:
-            return -1
+        if i>=j:                    
+            return -1               # when while condition is not met and the string is loop all      
         else: 
-            if isPalindrome(s[i+1:j]): 
+            if isPalindrome(s[i+1:j+1]): 
                 return i
-            if isPalindrome(s[i:j-1]):
-                return j-1
+            if isPalindrome(s[i:j]):
+                return j
         return -1
     return Solve(s)
 

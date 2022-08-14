@@ -25,11 +25,15 @@ Each of the resulting values  represents the number of times  appeared in .
 
 """
 def countingSort(arr):
-    freq = [0]
-    freq = freq*100
-    arr.sort()
+    """
+    Return the frequency of element in the array for the value of each element is refered to 
+    a consecutive sequence of natural numbers from 1 to 100
+    """ 
+    freq = [0]                  # Set frequency equal 0 for each element by default
+    freq = freq*100     
+    arr.sort()                  # Sort the array ascendingly 
     for i in range(len(freq)):
-        freq[i] = arr.count(i) 
+        freq[i] = arr.count(i)  # Replace 0 by the number of appearance if element appears in array
     return freq   
 
 if __name__ == '__main__':
